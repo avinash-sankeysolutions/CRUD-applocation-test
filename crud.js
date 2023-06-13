@@ -153,7 +153,7 @@ function checkDuplicate(){
 function empIdCheck(){
     var id=document.getElementById("emp_id").value;
     // emp_id_data.push(formData.emp_id);
-    // console.log(emp_id_data);
+    console.log(emp_id_data);
     if(emp_id_data.includes(id)){
         alert("This id was previously used");
         updateRecord(formData);
@@ -172,7 +172,7 @@ function empIdCheck(){
     //         break;
             
     //     }
-    //     console.log("out of loop");
+        console.log("out of loop");
     // }
     // return true;
 }
@@ -180,16 +180,17 @@ function empIdCheck(){
 function sortTable(){
     var table, rows, switching, i, shouldSwitch;
     table=document.getElementById("emp_list");
-    switching=true;
+    switching= true;
     while(switching){
         switching=false;
         rows=table.rows;
         // for(i=1;i<(rows.length+1);i++){
             for(i=1;i<(rows.length-1);i++){
+                // shouldSwitch=true;
             shouldSwitch=false;
             var x=rows[i].getElementsByTagName("TD")[0];
             var y=rows[i+1].getElementsByTagName("TD")[0];
-            if(x.innerHTML>y.innerHTML){
+            if(x.innerHTML > y.innerHTML){
                 shouldSwitch=true;
                 break;
             }
@@ -205,27 +206,19 @@ function sortTable(){
 //     var input = document.getElementById("searchInput").value.toLowerCase();
 //     var table = document.getElementById("emp_list");
 //     var rows = table.getElementsByTagName("tr");
-
-//     for (var i = 0; i < rows.length; i++) {
-//         var rowData = rows[i].textContent.toLowerCase();
-
-//         if (rowData.includes(input)) {
-//             rows[i].style.display = "";
-//         } else {
 //             rows[i].style.display = "none";
 //         }
-//     }
 // }
 
-// implement search function
 
-function searchTable() {
-    var input = document.getElementById("searchInput").value.toLowerCase();
+
+function searchFunction() {
+    var input = document.getElementById("searchInput").value;
     var table = document.getElementById("emp_list");
     var rows = table.getElementsByTagName("tr");
 
     for (var i = 0; i < rows.length; i++) {
-        var rowData = rows[i].textContent.toLowerCase();
+        var rowData = rows[i].textContent;
 
         if (rowData.includes(input)) {
             rows[i].style.display = "";

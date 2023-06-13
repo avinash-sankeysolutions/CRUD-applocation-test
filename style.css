@@ -3,7 +3,7 @@ body > table{
 }
 
 table{
-    border-collapse: collapse;
+    border-collapse:collapse;
     
 }
 table.list{
@@ -12,9 +12,9 @@ table.list{
 }
 
 td, th {
-    border: 20px solid #2c2738;
+    border: 4px solid #2c2738;
     text-align: left;
-    padding: 8px;
+    padding: 10px;
 }
 
 tr:nth-child(even),table.list thead>tr {
@@ -39,7 +39,6 @@ input[type=text], input[type=number]  {
     border-radius: 4px;
   }
   
-  /* Apply styles to the option elements */
   #emp_gender option {
     font-size: 14px;
   }
