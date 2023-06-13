@@ -1,0 +1,138 @@
+body > table{
+    width: 100%;
+}
+
+table{
+    border-collapse: collapse;
+    
+}
+table.list{
+    width:100%;
+    
+}
+
+td, th {
+    border: 20px solid #2c2738;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even),table.list thead>tr {
+    background-color: #dddddd;
+    
+}
+
+input[type=text], input[type=number]  {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#emp_gender {
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Apply styles to the option elements */
+  #emp_gender option {
+    font-size: 14px;
+  }
+
+  .validation_error{
+    color: red;
+    margin-left: 5px;
+  }
+
+
+input[type=submit]{
+    width: 30%;
+    background-color: rgb(102, 188, 102);
+    color: rgb(249, 249, 249);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form div.form-action-buttons{
+    text-align: right;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #0000ee;
+    margin-right: 4px;
+}
+
+.hide{
+    display:none;
+}
+
+.tool-tip {
+    position: relative;
+  }
+  
+  .tool-tip::before {
+    content: attr(title);
+    visibility: hidden;
+    background-color: rgb(158, 46, 46);
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    /* transition: opacity 0.3s ease; */
+  }
+  
+  .tool-tip:hover::before {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .edit-link {
+    /* CSS rules for the Edit link */
+    width: 20%;
+    background-color: green;
+    color: white;
+    padding: 5px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    
+  }
+  
+  .delete-link {
+    /* CSS rules for the Delete link */
+    width: 20%;
+    background-color: red;
+    color: white;
+    padding: 5px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .sorttable{
+    cursor: pointer;
+    padding: 5px 20px;
+    margin: 15px 0;
+    border: 2px solid;
+    border-radius: 4px;
+  }

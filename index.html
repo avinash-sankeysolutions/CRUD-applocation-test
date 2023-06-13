@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Portal</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <h1>Employee Portal</h1>
+    
+    <script src="crud.js"></script>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
+                    <div>
+                    <label>Employee ID*</label><label class="validation_error hide" id="id_validation_error"><b> Enter a unique ID</b></label>
+                    <input type="number" name="emp_id" id="emp_id">
+                 </div>
+                    <div>
+                    <label>Employee Name*</label><label class="validation_error hide" id="name_validation_error"><b>Please enter your full name</b></label>
+                    <input type="text" name="emp_name" id="emp_name">
+                    </div>
+                    <div>
+                    <label>Age</label><label class="validation_error hide" id="age_validation_error"><b>Please enter valid age</b></label>
+                    <input type="number" name="emp_age" id="emp_age" title="Age must be from 18 to 65 only">
+                </div>
+
+            </div>
+            <div>
+            <label>Gender</label><label class="validation_error hide" id="gender_validation_error"><b>Please select your gender</b></label>
+            <select id="emp_gender" name="emp_gender">
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+             </div>
+
+                <div class="form-action-buttons">
+                    <input type="submit" value="Submit">
+                </div>
+
+         </form>
+     </td>
+         <td>
+                <table class="list" id="emp_list">
+                    <thead>
+                        <button class="sorttable" onclick="sortTable()">Sort</button>
+                        <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for Employee Id">
+                        <tr>
+                            <th>Employee ID</th>
+                            <th>Employee Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+        </td>          
+        </tr>
+    </table>  
+</body>
+</html>
